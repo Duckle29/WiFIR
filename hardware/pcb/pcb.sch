@@ -1,0 +1,443 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:LED_Small D1
+U 1 1 5E6E5E13
+P 5325 4875
+F 0 "D1" V 5371 4807 50  0000 R CNN
+F 1 "VSML3710-GS18" V 5280 4807 50  0000 R CNN
+F 2 "LED_SMD:LED_PLCC-2" V 5325 4875 50  0001 C CNN
+F 3 "~" V 5325 4875 50  0001 C CNN
+	1    5325 4875
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5E6E7399
+P 5325 5075
+F 0 "R3" H 5384 5121 50  0000 L CNN
+F 1 "6R8" H 5384 5030 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5325 5075 50  0001 C CNN
+F 3 "~" H 5325 5075 50  0001 C CNN
+	1    5325 5075
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5E6E85DE
+P 5450 5825
+F 0 "#PWR0101" H 5450 5575 50  0001 C CNN
+F 1 "GND" H 5455 5652 50  0000 C CNN
+F 2 "" H 5450 5825 50  0001 C CNN
+F 3 "" H 5450 5825 50  0001 C CNN
+	1    5450 5825
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_NMOS_GSD Q1
+U 1 1 5E6EB64B
+P 5350 5475
+F 0 "Q1" H 5555 5521 50  0000 L CNN
+F 1 "FDN339AN" H 5555 5430 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 5550 5575 50  0001 C CNN
+F 3 "~" H 5350 5475 50  0001 C CNN
+	1    5350 5475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5E6EC9D9
+P 4900 5625
+F 0 "R1" H 4841 5579 50  0000 R CNN
+F 1 "4k7" H 4841 5670 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4900 5625 50  0001 C CNN
+F 3 "~" H 4900 5625 50  0001 C CNN
+	1    4900 5625
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5E6EDE2C
+P 5050 5475
+F 0 "R2" V 4854 5475 50  0000 C CNN
+F 1 "1k" V 4945 5475 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5050 5475 50  0001 C CNN
+F 3 "~" H 5050 5475 50  0001 C CNN
+	1    5050 5475
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5450 5825 5450 5775
+Wire Wire Line
+	4900 5725 4900 5775
+Wire Wire Line
+	4900 5775 5450 5775
+Connection ~ 5450 5775
+Wire Wire Line
+	5450 5775 5450 5675
+Wire Wire Line
+	4900 5525 4900 5475
+Wire Wire Line
+	4900 5475 4950 5475
+$Comp
+L Device:D_Schottky_Small D2
+U 1 1 5E960823
+P 3150 4800
+F 0 "D2" H 3200 4700 50  0000 R CNN
+F 1 "BAT54WS" H 3325 4900 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" V 3150 4800 50  0001 C CNN
+F 3 "~" V 3150 4800 50  0001 C CNN
+	1    3150 4800
+	0    1    -1   0   
+$EndComp
+Text Label 3150 4950 3    50   ~ 0
+device_wake
+Wire Wire Line
+	3150 4950 3150 4900
+Wire Wire Line
+	3150 4700 3150 4600
+Connection ~ 3425 4600
+Wire Wire Line
+	3425 4600 3575 4600
+Wire Wire Line
+	3425 4600 3425 4700
+Wire Wire Line
+	3150 4600 3425 4600
+Connection ~ 3425 4950
+Wire Wire Line
+	3425 4950 3425 5000
+Wire Wire Line
+	3425 4900 3425 4950
+$Comp
+L Device:C_Small C1
+U 1 1 5E96F8AD
+P 3425 4800
+F 0 "C1" H 3517 4846 50  0000 L CNN
+F 1 "1uF" H 3517 4755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3425 4800 50  0001 C CNN
+F 3 "~" H 3425 4800 50  0001 C CNN
+	1    3425 4800
+	1    0    0    -1  
+$EndComp
+Text Label 3575 4600 2    50   ~ 0
+~RST
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 5E95CEF7
+P 3425 5200
+F 0 "SW1" V 3471 5112 50  0000 R CNN
+F 1 "SW_SPST" V 3380 5112 50  0000 R CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 3425 5200 50  0001 C CNN
+F 3 "~" H 3425 5200 50  0001 C CNN
+	1    3425 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5E98069E
+P 3425 5400
+F 0 "#PWR0102" H 3425 5150 50  0001 C CNN
+F 1 "GND" H 3430 5227 50  0000 C CNN
+F 2 "" H 3425 5400 50  0001 C CNN
+F 3 "" H 3425 5400 50  0001 C CNN
+	1    3425 5400
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	3000 4400 3000 5650
+Wire Notes Line
+	3000 5650 4200 5650
+Wire Notes Line
+	4200 5650 4200 4400
+Wire Notes Line
+	4200 4400 3000 4400
+Text Notes 3025 4500 0    50   ~ 0
+Reset circuit
+Wire Wire Line
+	4900 5475 4750 5475
+Connection ~ 4900 5475
+Text Label 4750 5475 2    50   ~ 0
+IR_BLASTER
+$Comp
+L Device:LED_Small D3
+U 1 1 5E990935
+P 5575 4875
+F 0 "D3" V 5621 4807 50  0000 R CNN
+F 1 "VSML3710-GS18" V 5530 4807 50  0000 R CNN
+F 2 "LED_SMD:LED_PLCC-2" V 5575 4875 50  0001 C CNN
+F 3 "~" V 5575 4875 50  0001 C CNN
+	1    5575 4875
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 5E99093F
+P 5575 5075
+F 0 "R7" H 5634 5121 50  0000 L CNN
+F 1 "6R8" H 5634 5030 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5575 5075 50  0001 C CNN
+F 3 "~" H 5575 5075 50  0001 C CNN
+	1    5575 5075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5575 4775 5575 4725
+Wire Wire Line
+	5575 4725 5450 4725
+Wire Wire Line
+	5325 4725 5325 4775
+Wire Wire Line
+	5575 5175 5575 5225
+Wire Wire Line
+	5575 5225 5450 5225
+Wire Wire Line
+	5325 5225 5325 5175
+Wire Wire Line
+	5450 5225 5450 5275
+Connection ~ 5450 5225
+Wire Wire Line
+	5450 5225 5325 5225
+Wire Wire Line
+	5450 4725 5450 4675
+Connection ~ 5450 4725
+Wire Wire Line
+	5450 4725 5325 4725
+$Comp
+L Interface_Optical:TSOP382xx U2
+U 1 1 5E9C4FD3
+P 7050 5575
+F 0 "U2" H 7100 5900 50  0000 R CNN
+F 1 "TSOP38236" H 7250 5275 50  0000 R CNN
+F 2 "OptoDevice:Vishay_MINICAST-3Pin" H 7000 5200 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/82491/tsop382.pdf" H 7700 5875 50  0001 C CNN
+	1    7050 5575
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 5775 6600 5775
+Wire Wire Line
+	6600 5775 6600 5825
+Text Label 6600 5575 2    50   ~ 0
+IR_DEMOD_SIG
+Wire Wire Line
+	6650 5375 6600 5375
+Wire Wire Line
+	6600 5375 6600 5325
+Wire Wire Line
+	6600 5575 6650 5575
+Wire Notes Line
+	4225 6125 7650 6125
+Wire Notes Line
+	7650 6125 7650 4400
+Wire Notes Line
+	7650 4400 4225 4400
+Wire Notes Line
+	4225 4400 4225 6125
+Text Notes 4250 4500 0    50   ~ 0
+IR
+Text Label 3925 4950 2    50   ~ 0
+factory_reset
+$Comp
+L Device:R_Small R4
+U 1 1 5EA0848F
+P 3950 4800
+F 0 "R4" H 3891 4754 50  0000 R CNN
+F 1 "10k" H 3891 4845 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3950 4800 50  0001 C CNN
+F 3 "~" H 3950 4800 50  0001 C CNN
+	1    3950 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 4950 3950 4900
+Wire Wire Line
+	3425 4950 3950 4950
+$Comp
+L power:+3V3 #PWR0104
+U 1 1 5EA0A7BF
+P 3950 4700
+F 0 "#PWR0104" H 3950 4550 50  0001 C CNN
+F 1 "+3V3" H 3965 4873 50  0000 C CNN
+F 2 "" H 3950 4700 50  0001 C CNN
+F 3 "" H 3950 4700 50  0001 C CNN
+	1    3950 4700
+	-1   0    0    -1  
+$EndComp
+Text Label 6600 5325 2    50   ~ 0
+IR_DeMod_VCC
+$Comp
+L power:GND #PWR0105
+U 1 1 5EA1F589
+P 6600 5825
+F 0 "#PWR0105" H 6600 5575 50  0001 C CNN
+F 1 "GND" H 6605 5652 50  0000 C CNN
+F 2 "" H 6600 5825 50  0001 C CNN
+F 3 "" H 6600 5825 50  0001 C CNN
+	1    6600 5825
+	1    0    0    -1  
+$EndComp
+Text Notes 3025 2200 0    50   ~ 0
+MCU
+Wire Notes Line
+	3000 2100 3000 4375
+Wire Notes Line
+	5125 2100 3000 2100
+Wire Notes Line
+	5125 4375 5125 2100
+Wire Notes Line
+	3000 4375 5125 4375
+Wire Wire Line
+	4600 3375 4025 3375
+Text Label 4600 3675 2    50   ~ 0
+IR_DeMod_VCC
+Wire Wire Line
+	4600 3675 4025 3675
+Text Label 4600 3375 2    50   ~ 0
+IR_BLASTER
+Wire Wire Line
+	4025 3475 5075 3475
+Wire Wire Line
+	5225 3175 5075 3175
+Connection ~ 4775 3075
+Wire Wire Line
+	4025 3075 4775 3075
+Connection ~ 4875 2975
+Wire Wire Line
+	4875 2975 4025 2975
+Wire Wire Line
+	4875 2975 4875 2925
+Wire Wire Line
+	5225 2975 4875 2975
+Wire Wire Line
+	4775 3075 5225 3075
+Wire Wire Line
+	4775 2925 4775 3075
+Wire Wire Line
+	4825 2675 4875 2675
+Connection ~ 4825 2675
+Wire Wire Line
+	4825 2675 4825 2625
+Wire Wire Line
+	4875 2675 4875 2725
+Wire Wire Line
+	4775 2675 4825 2675
+Wire Wire Line
+	4775 2725 4775 2675
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 5EA13C83
+P 4825 2625
+F 0 "#PWR0106" H 4825 2475 50  0001 C CNN
+F 1 "+3V3" H 4840 2798 50  0000 C CNN
+F 2 "" H 4825 2625 50  0001 C CNN
+F 3 "" H 4825 2625 50  0001 C CNN
+	1    4825 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5EA0FE27
+P 4875 2825
+F 0 "R6" H 4816 2779 50  0000 R CNN
+F 1 "4k7" H 4816 2870 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4875 2825 50  0001 C CNN
+F 3 "~" H 4875 2825 50  0001 C CNN
+	1    4875 2825
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5EA0F94E
+P 4775 2825
+F 0 "R5" H 4716 2779 50  0000 R CNN
+F 1 "4k7" H 4716 2870 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4775 2825 50  0001 C CNN
+F 3 "~" H 4775 2825 50  0001 C CNN
+	1    4775 2825
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	4025 3275 4600 3275
+Text Label 4600 3275 2    50   ~ 0
+IR_DeMod_SIG
+$Comp
+L power:GND #PWR0107
+U 1 1 5E97F3BF
+P 3625 4075
+F 0 "#PWR0107" H 3625 3825 50  0001 C CNN
+F 1 "GND" H 3630 3902 50  0000 C CNN
+F 2 "" H 3625 4075 50  0001 C CNN
+F 3 "" H 3625 4075 50  0001 C CNN
+	1    3625 4075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4025 3575 4600 3575
+Text Label 4600 3575 2    50   ~ 0
+factory_reset
+Wire Wire Line
+	3225 2875 3075 2875
+Text Label 3075 2875 0    50   ~ 0
+~RST
+Wire Wire Line
+	4025 2875 4500 2875
+Text Label 4500 2875 2    50   ~ 0
+device_wake
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 5E6F1B55
+P 3725 2475
+F 0 "#PWR0103" H 3725 2325 50  0001 C CNN
+F 1 "+3V3" H 3740 2648 50  0000 C CNN
+F 2 "" H 3725 2475 50  0001 C CNN
+F 3 "" H 3725 2475 50  0001 C CNN
+	1    3725 2475
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Module:WeMos_D1_mini U1
+U 1 1 5E6E3B62
+P 3625 3275
+F 0 "U1" H 3575 3300 50  0000 L CNN
+F 1 "WeMos_D1_mini" H 3675 2525 50  0000 L CNN
+F 2 "Module:WEMOS_D1_mini_light" H 3625 2125 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H 1775 2125 50  0001 C CNN
+	1    3625 3275
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0108
+U 1 1 5EA532E0
+P 5450 4675
+F 0 "#PWR0108" H 5450 4525 50  0001 C CNN
+F 1 "+3V3" H 5465 4848 50  0000 C CNN
+F 2 "" H 5450 4675 50  0001 C CNN
+F 3 "" H 5450 4675 50  0001 C CNN
+	1    5450 4675
+	-1   0    0    -1  
+$EndComp
+$Sheet
+S 5225 2900 525  350 
+U 5E707A75
+F0 "Power management" 50
+F1 "PowerManagement.sch" 50
+F2 "~LOW_BAT" O L 5225 3175 50 
+F3 "SDA" B L 5225 3075 50 
+F4 "SCL" I L 5225 2975 50 
+$EndSheet
+Wire Wire Line
+	5075 3175 5075 3475
+$EndSCHEMATC
