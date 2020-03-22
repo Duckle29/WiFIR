@@ -1,4 +1,4 @@
-# Duckles generic PCB template
+# WiFI*R*
 
 The WiFI*R* is a WiFi IR blaster / remote, based around a WeMos D1 mini (ESP8266)
 
