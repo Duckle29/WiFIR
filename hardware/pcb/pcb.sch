@@ -139,14 +139,14 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 5E88BDD0
-P 8625 3075
+P 8925 3125
 AR Path="/5E707A75/5E88BDD0" Ref="#PWR?"  Part="1" 
 AR Path="/5E88BDD0" Ref="#PWR02"  Part="1" 
-F 0 "#PWR02" H 8625 2825 50  0001 C CNN
-F 1 "GND" H 8630 2902 50  0000 C CNN
-F 2 "" H 8625 3075 50  0001 C CNN
-F 3 "" H 8625 3075 50  0001 C CNN
-	1    8625 3075
+F 0 "#PWR02" H 8925 2875 50  0001 C CNN
+F 1 "GND" H 8930 2952 50  0000 C CNN
+F 2 "" H 8925 3125 50  0001 C CNN
+F 3 "" H 8925 3125 50  0001 C CNN
+	1    8925 3125
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -476,13 +476,13 @@ F 3 "https://www.ti.com/lit/ds/symlink/tlv757p.pdf" H 8925 1825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	8475 3325 9425 3325
+	8150 3525 9650 3525
 Wire Notes Line
-	8475 2525 8475 3325
+	8150 2450 8150 3525
 Wire Notes Line
-	9425 2525 8475 2525
+	9650 2450 8150 2450
 Wire Notes Line
-	9425 3325 9425 2525
+	9650 3525 9650 2450
 Text Notes 5300 1325 0    50   ~ 0
 Fuel gauge
 Wire Notes Line
@@ -818,27 +818,27 @@ $EndComp
 $Comp
 L power:+BATT #PWR?
 U 1 1 5E88BC77
-P 8625 2775
+P 8925 2825
 AR Path="/5E707A75/5E88BC77" Ref="#PWR?"  Part="1" 
 AR Path="/5E88BC77" Ref="#PWR01"  Part="1" 
-F 0 "#PWR01" H 8625 2625 50  0001 C CNN
-F 1 "+BATT" H 8640 2948 50  0000 C CNN
-F 2 "" H 8625 2775 50  0001 C CNN
-F 3 "" H 8625 2775 50  0001 C CNN
-	1    8625 2775
+F 0 "#PWR01" H 8925 2675 50  0001 C CNN
+F 1 "+BATT" H 8940 2998 50  0000 C CNN
+F 2 "" H 8925 2825 50  0001 C CNN
+F 3 "" H 8925 2825 50  0001 C CNN
+	1    8925 2825
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Battery_Cell BT?
 U 1 1 5E88BC71
-P 8625 2975
+P 8925 3025
 AR Path="/5E707A75/5E88BC71" Ref="BT?"  Part="1" 
 AR Path="/5E88BC71" Ref="BT1"  Part="1" 
-F 0 "BT1" H 8743 3071 50  0000 L CNN
-F 1 "protected 18650" H 8743 2980 50  0000 L CNN
-F 2 "Battery:BatteryHolder_Keystone_1042_1x18650" V 8625 3035 50  0001 C CNN
-F 3 "~" V 8625 3035 50  0001 C CNN
-	1    8625 2975
+F 0 "BT1" H 9043 3121 50  0000 L CNN
+F 1 "protected 18650" H 8600 2675 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1042_1x18650" V 8925 3085 50  0001 C CNN
+F 3 "~" V 8925 3085 50  0001 C CNN
+	1    8925 3025
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1059,8 +1059,6 @@ F 3 "~" V 5675 4375 50  0001 C CNN
 	1    5675 4375
 	0    -1   -1   0   
 $EndComp
-Text Label 4850 4975 2    50   ~ 0
-IR_BLASTER
 Connection ~ 5000 4975
 Wire Wire Line
 	5000 4975 4850 4975
@@ -1158,8 +1156,8 @@ L power:+3V3 #PWR?
 U 1 1 5EB65D23
 P 7475 2075
 AR Path="/5E707A75/5EB65D23" Ref="#PWR?"  Part="1" 
-AR Path="/5EB65D23" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 7475 1925 50  0001 C CNN
+AR Path="/5EB65D23" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 7475 1925 50  0001 C CNN
 F 1 "+3V3" H 7490 2248 50  0000 C CNN
 F 2 "" H 7475 2075 50  0001 C CNN
 F 3 "" H 7475 2075 50  0001 C CNN
@@ -1188,4 +1186,8 @@ $EndComp
 Wire Wire Line
 	7475 2525 7475 2800
 Connection ~ 7475 2525
+Text GLabel 4850 4975 0    50   Input ~ 0
+IR_BLAST
+Text Notes 8175 2550 0    50   ~ 0
+Battery connections
 $EndSCHEMATC
