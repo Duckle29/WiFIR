@@ -15,4 +15,4 @@ This project came about, as I needed to be able to remotely control a heat-pump 
 ![top render](hardware/pcb/renders/top.png)
 ![bottom render](hardware/pcb/renders/bot.png)
 
-[Interactive BOM](duckle29.github.io/WiFIR/hardware/pcb/ibom.html)
+[Interactive BOM](https://duckle29.github.io/WiFIR/hardware/pcb/ibom.html)
