@@ -1,7 +1,7 @@
 
 # WiFI*R*
 
-## MOVED TO [https://github.com/WiFIR/pcb/tree/v0.4)
+## MOVED [HERE](https://github.com/WiFIR/pcb/tree/v0.4)
 
 The WiFI*R* is a WiFi IR blaster / remote, based around a WeMos D1 mini (ESP8266)
 
